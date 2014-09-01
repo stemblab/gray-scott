@@ -1,0 +1,67 @@
+<div id="text">
+
+  <h2> Turing, biology and pattern formation </h2>
+  
+  <div class="left_col">
+
+    [http://en.wikipedia.org/wiki/Alan_Turing, Alan Turing] spent his
+    last few years working on pattern formation in mathematical
+    biology---making a
+    [http://en.wikipedia.org/wiki/The_Chemical_Basis_of_Morphogenesis,
+    fundamental contribution] to
+    [http://en.wikipedia.org/wiki/Reaction-diffusion_system,
+    reaction-diffusion systems].  These systems describe an amazing
+    array of natural phenomena in biology, chemistry, ecology and
+    more. The Gray-Scott
+    [http://people.maths.ox.ac.uk/trefethen/pdectb/reaction2.pdf,(pdf)]
+    model, for instance, generates complex patterns from a relatively
+    simple model [http://www3.nd.edu/~powers/pearson.pdf, (pdf)]:
+
+    $$ 
+    \begin{align} 
+    U_t &= D_u \nabla^2 U - UV^2 + F(1-U) \nonumber \\
+    V_t &= D_v \nabla^2 V + UV^2 - (F+k)V \nonumber 
+    \end{align}
+    $$
+
+    Here $U$ and $V$ are the spatial concentrations of two chemicals,
+    which are particularly sensitive to parameters $F$ and $k$.  The
+    plot shows the <span class="pz_text"
+    ref="code_note">evolution</span> of $V$ from a randomized initial
+    condition. Parameters $D_u=0.19$ and $D_v=0.05$ are fixed, but
+    clicking the figure cycles through three combinations of $F$ and
+    $k$.
+
+  </div>
+
+  <div class="pz_note" id="code_note">
+
+    The CoffeeScript is based on 
+    [http://www.loria.fr/~rougier/teaching/numpy/scripts/gray-scott.py, this Python].
+
+  </div>
+
+  <div class="right_col">
+
+    <div class="container">
+
+      <div id="param_text"></div>
+
+      <canvas id="canvas" width="256" height="256"></canvas>
+
+      <div id="instruction_text">
+
+	<i>Click figure to change parameter values and run 
+	  <b><a id="coffee_link">CoffeeScript</a> numerical solution</b>.</i>
+     
+      </div>
+  
+    </div>
+
+  </div>
+
+  <div class="clear"></div>
+
+</div>
+
+
