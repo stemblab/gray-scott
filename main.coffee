@@ -140,5 +140,4 @@ class Simulation
 
 new Simulation
 
-$("#coffee_link").click -> $blab.show "Coffee", on
 
